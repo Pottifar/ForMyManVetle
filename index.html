@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function Red(){
+        document.getElementById("paragraf").style.color = "red";
+    }
+
+    function Blue(){
+        document.getElementById("paragraf").style.color = "blue";
+    }
+
+    function Svart(){
+        document.getElementById("paragraf").style.color = "black";
+    }
+    function Lilla(){
+        document.getElementById("paragraf").style.color = "purple";
+    }
+    function Gul(){
+        document.getElementById("paragraf").style.color = "yellow";
+    }
+    function Tilfeldig(){
+        var rFarge = Math.floor((Math.random() * 255) + 1);
+        var gFarge = Math.floor((Math.random() * 255) + 1);
+        var bFarge = Math.floor((Math.random() * 255) + 1);
+
+        rFarge = Number(rFarge).toString(16);
+        gFarge = Number(gFarge).toString(16);
+        bFarge = Number(bFarge).toString(16);
+
+        var farge = "#"
+        farge = farge.concat(rFarge, gFarge, bFarge);
+        // farge = farge.concat(gFarge);
+        // farge = farge.concat(bFarge);
+
+        document.getElementById("paragraf").style.color = farge;
+    }
+</script>
+<style>
+    .Red {
+        color: rgb(131, 37, 37);
+    }
+</style>
+</head>
+<body>
+    <button onclick="Red()">Rød</button>
+    <button onclick="Blue()">Blå</button>
+    <button onclick="Svart()">Svart</button>
+    <button onclick="Lilla()">Lilla</button>
+    <button onclick="Gul()">Gul</button>
+    <button onclick="Tilfeldig()">Random</button>
+
+    <p id="paragraf">
+        øajoh-lawnefl epifj awijef oaøijefpawje fawe fohalivhawøoieh iojeoiqjwe o fijaepiojh fapuh laiwehb awileh
+    </p>
+</body>
+</html>
